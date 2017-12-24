@@ -18,7 +18,7 @@ function ajaxFormSubmit(){
         request.open(method, action, true);
         request.onreadystatechange = function() {
             if(this.readyState === 4 && this.status === 200) {
-                formMessages.textContent = request.response;
+                formMessages.innerHTML = request.response;
             }
         };
         request.send(formData);
