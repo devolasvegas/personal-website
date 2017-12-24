@@ -13,6 +13,7 @@ function ajaxFormSubmit(){
         e.preventDefault();
 
         var formData = new FormData(contactForm);
+        formData.set('is-ajax', true);
 
         var request = new XMLHttpRequest();
         request.open(method, action, true);

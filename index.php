@@ -1,3 +1,11 @@
+<?php session_start();
+
+$confirm_msg = $_SESSION['confirm-msg'];
+
+session_unset();
+session_destroy();
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -50,8 +58,8 @@
             </article>
             <article class="contact-me" id="contact-me">
                 <h2>Get in Contact with Me</h2>
-                <ul id="form-messages"></ul>
-                <form id="contact-form" action="contact.php" method="post">
+                <ul id="form-messages"><?php echo $confirm_msg; ?></ul>
+                <form id="contact-form" action="php/contact.php" method="post">
                     <fieldset>
                         <legend>Your Personal Details</legend>
                         <p class="form-row">
@@ -76,6 +84,7 @@
                         </p>
                         <p class="form-row">
                             <input type="submit" value="Submit" />
+                            <input type="hidden" name="is-ajax" />
                         </p>
                     </fieldset>
                 </form>
