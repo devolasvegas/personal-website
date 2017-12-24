@@ -1,17 +1,24 @@
 <?php session_start();
 
-$confirm_msg = $_SESSION['confirm-msg'];
+$confirm_msg = (isset($_SESSION['confirm-msg']) ? $_SESSION['confirm-msg'] : '');
+
+if(isset($_SESSION['errors'])) {
+    $first_name_error = (isset($_SESSION['errors']['first-name']) ? $_SESSION['errors']['first-name'] : '');
+    $last_name_error = (isset($_SESSION['errors']['last-name']) ? $_SESSION['errors']['last-name'] : '');
+    $email_error = (isset($_SESSION['errors']['email']) ? $_SESSION['errors']['email'] : '');
+    $message_error = (isset($_SESSION['errors']['message']) ? $_SESSION['errors']['message'] : '');
+}
 
 session_unset();
 session_destroy();
 
 ?>
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html class="no-js" lang="en-CA">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title></title>
+        <title>Web Developer | Devon Daviau</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -63,24 +70,24 @@ session_destroy();
                     <fieldset>
                         <legend>Your Personal Details</legend>
                         <p class="form-row">
-                            <label for="first-name">First Name</label>
-                            <input id="first-name" name="first-name" type="text" />
+                            <label for="first-name">First Name*</label>
+                            <input class="<?php if($first_name_error) { echo 'error'; } ?>" id="first-name" name="first-name" type="text" />
                         </p>
                         <p class="form-row">
-                            <label for="last-name">Last Name</label>
-                            <input id="last-name" name="last-name" type="text" />
+                            <label for="last-name">Last Name*</label>
+                            <input class="<?php if($last_name_error) { echo 'error'; } ?>" id="last-name" name="last-name" type="text" />
                         </p>
                         <p class="form-row">
-                            <label for="email">Email</label>
-                            <input id="email" name="email" />
+                            <label for="email">Email*</label>
+                            <input class="<?php if($email_error) { echo 'error'; } ?>" id="email" name="email" />
                         </p>
                         <p class="form-row">
                             <label for="phone">Phone Number</label>
                             <input id="phone" name="phone" type="tel" />
                         </p>
                         <p class="form-row">
-                            <label for="message">Your Message</label>
-                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            <label for="message">Your Message*</label>
+                            <textarea class="<?php if($message_error) { echo 'error'; } ?>" name="message" id="message" cols="30" rows="10"></textarea>
                         </p>
                         <p class="form-row">
                             <input type="submit" value="Submit" />
@@ -90,12 +97,15 @@ session_destroy();
                 </form>
             </article>
         </main>
+        <footer>
+
+        </footer>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+<!--        <script src="js/main.js"></script>-->
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
