@@ -1,13 +1,11 @@
 <?php session_start();
 
 $confirm_msg = (isset($_SESSION['confirm-msg']) ? $_SESSION['confirm-msg'] : '');
+$first_name_error = (isset($_SESSION['errors']['first-name']) ? $_SESSION['errors']['first-name'] : '');
+$last_name_error = (isset($_SESSION['errors']['last-name']) ? $_SESSION['errors']['last-name'] : '');
+$email_error = (isset($_SESSION['errors']['email']) ? $_SESSION['errors']['email'] : '');
+$message_error = (isset($_SESSION['errors']['message']) ? $_SESSION['errors']['message'] : '');
 
-if(isset($_SESSION['errors'])) {
-    $first_name_error = (isset($_SESSION['errors']['first-name']) ? $_SESSION['errors']['first-name'] : '');
-    $last_name_error = (isset($_SESSION['errors']['last-name']) ? $_SESSION['errors']['last-name'] : '');
-    $email_error = (isset($_SESSION['errors']['email']) ? $_SESSION['errors']['email'] : '');
-    $message_error = (isset($_SESSION['errors']['message']) ? $_SESSION['errors']['message'] : '');
-}
 
 session_unset();
 session_destroy();
