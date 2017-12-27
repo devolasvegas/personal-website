@@ -56,7 +56,7 @@ if($is_ok) {
     $headers = "From: " . $mail_from . "\r\n" .
         "X-Mailer: PHP/" . phpversion();
 
-//    mail($mail_to, $mail_subject, $mail_message, $headers);
+    mail($mail_to, $mail_subject, $mail_message, $headers);
 
     if($is_ajax) {
         $form_msgs['formMessage'] = '<li class="success">Thanks for your Ajax message. I will get back to you as soon as I can.</li>';
