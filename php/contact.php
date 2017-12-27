@@ -13,34 +13,29 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 $is_ajax = $_POST['is-ajax'];
 $is_ok = true;
-$form_errors = array();
+$form_msgs = array();
 
 if(empty($first_name)) {
-    echo '<li class="error">Your First Name is Required</li>';
     $is_ok = false;
-    $form_errors['first-name'] = true;
+    $form_msgs['first-name'] = true;
 }
 
 if(empty($last_name)) {
-    echo '<li class="error">Your Last Name is Required</li>';
     $is_ok = false;
-    $form_errors['last-name'] = true;
+    $form_msgs['last-name'] = true;
 }
 
 if(empty($email)) {
-    echo '<li class="error">Your Email Address is Required</li>';
     $is_ok = false;
-    $form_errors['email'] = true;
+    $form_msgs['email'] = true;
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo '<li class="error">A Valid Email Address is Required</li>';
     $is_ok = false;
-    $form_errors['email'] = true;
+    $form_msgs['email'] = true;
 }
 
 if(empty($message)) {
-    echo '<li class="error">Please Send Me a Nice Message!</li>';
     $is_ok = false;
-    $form_errors['message'] = true;
+    $form_msgs['message'] = true;
 }
 
 if($is_ok) {
@@ -64,16 +59,19 @@ if($is_ok) {
 //    mail($mail_to, $mail_subject, $mail_message, $headers);
 
     if($is_ajax) {
-        echo '<li class="success">Thanks for your Ajax message. I will get back to you as soon as I can.</li>';
-        return $form_errors;
+        $form_msgs['formMessage'] = '<li class="success">Thanks for your Ajax message. I will get back to you as soon as I can.</li>';
+        print json_encode($form_msgs);
     } else {
         $_SESSION['confirm-msg'] = '<li class="success">Thanks for your PHP message. I will get back to you as soon as I can.</li>';
         header('location:../index.php');
         exit();
     }
 } elseif (!$is_ok && !$is_ajax) {
-    $_SESSION['errors'] =  $form_errors;
-    $_SESSION['confirm-msg'] = '<li class="success">There are some issues with your submission. See below.</li>';
+    $_SESSION['errors'] =  $form_msgs;
+    $_SESSION['confirm-msg'] = '<li class="error-msg">There are some issues with your submission. See below.</li>';
     header('location:../index.php');
     exit();
+} elseif (!$is_ok && $is_ajax) {
+    $form_msgs['formMessage'] = '<li class="error-msg">There are some issues with your submission. See below.</li>';
+    print json_encode($form_msgs);
 }

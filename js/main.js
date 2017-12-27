@@ -19,7 +19,18 @@ function ajaxFormSubmit(){
         request.open(method, action, true);
         request.onreadystatechange = function() {
             if(this.readyState === 4 && this.status === 200) {
-                formMessages.innerHTML = request.response;
+                var theResponse = JSON.parse(request.response);
+                formMessages.innerHTML = theResponse.formMessage;
+                var inputs = contactForm.querySelectorAll('[name]');
+                for(var i = 0; i < inputs.length; i++) {
+                    var input = inputs[i];
+                    var inputName = input.getAttribute('name');
+                    if(theResponse[inputName]) {
+                        input.classList.add('error');
+                    } else {
+                        input.classList.remove('error');
+                    }
+                }
             }
         };
         request.send(formData);
