@@ -10,6 +10,19 @@ $message_error = (isset($_SESSION['errors']['message']) ? $_SESSION['errors']['m
 session_unset();
 session_destroy();
 
+try {
+    require ('php/db.php');
+
+    $sql = "SELECT * FROM portfolio_pieces";
+    $cmd = $conn->prepare($sql);
+    $cmd->execute();
+    $pieces = $cmd->fetchAll();
+
+    $conn = null;
+} catch (Exception $e) {
+    echo $e;
+}
+
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en-CA">
@@ -48,6 +61,17 @@ session_destroy();
 
             </article>
             <article class="my-work">
+
+                <?php
+                    foreach ($pieces as $piece) {
+                        echo '<section class="project">
+                                <p>' . $piece['project_name']. '</p>
+                                <p>' . $piece['link']. '</p>
+                                <p>' . $piece['image']. '</p>
+                                <p>' . $piece['description']. '</p>
+                            </section>';
+                    }
+                ?>
                 <section class="project-1">
 
                 </section>

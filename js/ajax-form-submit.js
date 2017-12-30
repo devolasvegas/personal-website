@@ -15,6 +15,7 @@
         var formData = new FormData(contactForm);
 
         // This is a flag used in the PHP script for control flow
+        // TODO: Remove is-ajax from form
         formData.set('is-ajax', true);
 
         // No ketchup. Just raw sauce.
