@@ -105,7 +105,7 @@ textarea {
     text-decoration: none;
 }
 
-.mast-head {
+header {
     height: 70vh;
     background: url('../img/antelope-canyon-web-resize.jpg') no-repeat;
     background-size: cover;
@@ -113,7 +113,7 @@ textarea {
 
 @media (max-width: 999px) {
 
-    header {
+    .main-nav {
         background: #222;
         height: 100px;
     }
@@ -137,7 +137,7 @@ textarea {
 
 @media (min-width: 1000px) {
 
-    header {
+    .main-nav {
         position: absolute;
         width: 100%;
     }
@@ -155,17 +155,18 @@ textarea {
     .page-links li {
         display: inline-block;
     }
-    
-    .mobile-nav {
-        display: none;
-    }
 }
 
 .error {
     border-color: red;
 }
 
-
+footer {
+    height: 50px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
 
 
 

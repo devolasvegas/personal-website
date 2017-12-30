@@ -43,10 +43,7 @@ session_destroy();
                 </ul>
             </nav>
         </header>
-        <main role="main">
-            <article class="mast-head">
-
-            </article>
+        <main role="main" class="container">
             <article class="about-me">
 
             </article>
@@ -96,7 +93,7 @@ session_destroy();
             </article>
         </main>
         <footer>
-
+            <small>&copy; Copyright 2017 Devon Daviau</small>
         </footer>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
