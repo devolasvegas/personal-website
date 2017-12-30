@@ -20,10 +20,12 @@ try {
 
     $conn = null;
 } catch (Exception $e) {
-    echo $e;
+    require ('php/mailing-details.php');
+    mail($my_address, 'Website Home Page Error', $e);
 }
 
 ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en-CA">
     <head>
@@ -65,22 +67,20 @@ try {
                 <?php
                     foreach ($pieces as $piece) {
                         echo '<section class="project">
-                                <p>' . $piece['project_name']. '</p>
-                                <p>' . $piece['link']. '</p>
-                                <p>' . $piece['image']. '</p>
-                                <p>' . $piece['description']. '</p>
+                                <div class="project-image">
+                                    <a href="' . $piece['link'] . '" target="_blank">
+                                        <img src="' . $piece['image'] . '" alt="' . $piece['project_name'] . ' Screen Shot" />
+                                    </a>
+                                </div>
+                                <div class="project-description">
+                                    <h3>' . $piece['project_name'] . '</h3>
+                                    <p>' . $piece['description'] . '</p>
+                                    <a href="' . $piece['link'] . '" target="_blank" class="button">Visit this Project</a>
+                                </div>
                             </section>';
                     }
                 ?>
-                <section class="project-1">
 
-                </section>
-                <section class="project-2">
-
-                </section>
-                <section class="project-3">
-
-                </section>
             </article>
             <article class="contact-me" id="contact-me">
                 <h2>Get in Contact with Me</h2>

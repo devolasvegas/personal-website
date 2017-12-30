@@ -99,6 +99,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.container {
+    width: 1600px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+article {
+    padding: 30px 0;
+}
+
 .page-links a {
     color: #fff;
     font-size: 1.5rem;
@@ -109,6 +119,21 @@ header {
     height: 70vh;
     background: url('../img/antelope-canyon-web-resize.jpg') no-repeat;
     background-size: cover;
+}
+
+.project {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.my-work .project:nth-child(odd) .project-image {
+    order: 2
+}
+
+.project-description {
+    margin: 0 30px;
 }
 
 @media (max-width: 999px) {
