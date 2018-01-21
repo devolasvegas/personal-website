@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Devon Daviau -- Developer, copywriter, photographer. -- <twitter>
 
 # THANKS
 
-    <name>
+    Navy Nhum Photography (for my profile pic) www.navynhum.com
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
+    CSS3, HTML5, JavaScript, PHP
     Apache Server Configs, jQuery, Modernizr, Normalize.css

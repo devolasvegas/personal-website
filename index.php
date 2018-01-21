@@ -60,10 +60,21 @@ try {
         </header>
         <main role="main" class="container">
             <article class="about-me">
-
+                <h2>About Me</h2>
+                <section>
+                    <figure>
+                        <img src="img/headshot.jpg" alt="Portrait of Yours Truly" />
+                        <figcaption>Photograph courtesy of <a href="http://navynhum.com" target="_blank">Navy Nhum Photography</a></figcaption>
+                    </figure>
+                    <div class="bio-text">
+                        <p>Hi! My name is Devon and I am a junior full-stack web developer. I love code, teaching people to code, and some other stuff too. But my biggest passion in life is learning. I like to learn new things every day and if I am not learning something new, I don't consider it a full day.</p>
+                        <p>Born in Beautiful Barrie, Ontario, I was raised in the U.S.A. I returned to Canada in 2000 after my first year of university, and have been here since. My journey has led me down many paths since then, but I eventually found my way to HTML and CSS, which inspired me to join the Interactive Web Design and Development program at Georgian College in Barrie. Since completing the IWDD course, I have had the good fortune to be able to work in the industry, learning WordPress and honing my development skills.</p>
+                        <p>Now I look forward to more opportunities to learn and grow as a web developer. While I have a great deal of love for the front-end, I particularly look forward to building on my back-end and programming skills.</p>
+                    </div>
+                </section>
             </article>
             <article class="my-work">
-
+                <h2>My Work</h2>
                 <?php
                     foreach ($pieces as $piece) {
                         echo '<section class="project">
@@ -83,7 +94,7 @@ try {
 
             </article>
             <article class="contact-me" id="contact-me">
-                <h2>Get in Contact with Me</h2>
+                <h2>Contact Me</h2>
                 <ul id="form-messages"><?php echo $confirm_msg; ?></ul>
                 <form id="contact-form" action="php/contact.php" method="post">
                     <fieldset>
@@ -117,7 +128,7 @@ try {
             </article>
         </main>
         <footer>
-            <small>&copy; Copyright 2017 Devon Daviau</small>
+            <small>&copy; <?php echo date("Y") ?> Devon Daviau. All rights reserved.</small>
         </footer>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>

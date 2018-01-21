@@ -123,7 +123,7 @@ header {
 
 .project {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 30px 0;
 }
@@ -132,8 +132,12 @@ header {
     order: 2
 }
 
-.project-description {
-    margin: 0 30px;
+.my-work .project:nth-child(even) .project-description {
+    margin-left: 30px;
+}
+
+.my-work .project:nth-child(odd) .project-description {
+    margin-right: 30px;
 }
 
 @media (max-width: 999px) {
