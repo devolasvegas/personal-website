@@ -62,10 +62,10 @@ try {
             <article class="about-me">
                 <h2>About Me</h2>
                 <section>
-                    <figure>
+                    <div class="bio-img">
                         <img src="img/headshot.jpg" alt="Portrait of Yours Truly" />
-                        <figcaption>Photograph courtesy of <a href="http://navynhum.com" target="_blank">Navy Nhum Photography</a></figcaption>
-                    </figure>
+                        <small>Portrait courtesy of <a href="http://navynhum.com" target="_blank">Navy Nhum Photography</a></small>
+                    </div>
                     <div class="bio-text">
                         <p>Hi! My name is Devon and I am a junior full-stack web developer. I love code, teaching people to code, and some other stuff too. But my biggest passion in life is learning. I like to learn new things every day and if I am not learning something new, I don't consider it a full day.</p>
                         <p>Born in Beautiful Barrie, Ontario, I was raised in the U.S.A. I returned to Canada in 2000 after my first year of university, and have been here since. My journey has led me down many paths since then, but I eventually found my way to HTML and CSS, which inspired me to join the Interactive Web Design and Development program at Georgian College in Barrie. Since completing the IWDD course, I have had the good fortune to be able to work in the industry, learning WordPress and honing my development skills.</p>
