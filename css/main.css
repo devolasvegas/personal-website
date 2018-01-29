@@ -1,4 +1,6 @@
 @import 'fonts/font-awesome-4.7.0/css/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
@@ -99,6 +101,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+}
+
 .container {
     width: 1100px;
     max-width: 95%;
@@ -107,6 +117,10 @@ textarea {
 
 article {
     padding: 30px 0;
+}
+
+.main-nav li {
+    font-family: "Lato", sans-serif;
 }
 
 .page-links a {
@@ -150,6 +164,12 @@ header {
 
 .my-work .project:nth-child(odd) .project-description {
     margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    .bio-img {
+        display: none;
+    }
 }
 
 @media (max-width: 999px) {
