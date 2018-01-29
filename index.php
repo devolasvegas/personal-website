@@ -59,73 +59,80 @@ try {
             </nav>
         </header>
         <main role="main" class="container">
-            <article class="about-me">
-                <h2>About Me</h2>
-                <section>
-                    <div class="bio-img">
-                        <img src="img/headshot.jpg" alt="Portrait of Yours Truly" />
-                        <small>Portrait courtesy of <a href="http://navynhum.com" target="_blank">Navy Nhum Photography</a></small>
-                    </div>
-                    <div class="bio-text">
-                        <p>Hi! My name is Devon and I am a junior full-stack web developer. I love code, teaching people to code, and some other stuff too. But my biggest passion in life is learning. I like to learn new things every day and if I am not learning something new, I don't consider it a full day.</p>
-                        <p>Born in Beautiful Barrie, Ontario, I was raised in the U.S.A. I returned to Canada in 2000 after my first year of university, and have been here since. My journey has led me down many paths since then, but I eventually found my way to HTML and CSS, which inspired me to join the Interactive Web Design and Development program at Georgian College in Barrie. Since completing the IWDD course, I have had the good fortune to be able to work in the industry, learning WordPress and honing my development skills.</p>
-                        <p>Now I look forward to more opportunities to learn and grow as a web developer. While I have a great deal of love for the front-end, I particularly look forward to building on my back-end and programming skills.</p>
-                    </div>
-                </section>
-            </article>
-            <article class="my-work">
-                <h2>My Work</h2>
-                <?php
-                    foreach ($pieces as $piece) {
-                        echo '<section class="project">
-                                <div class="project-image">
-                                    <a href="' . $piece['link'] . '" target="_blank">
-                                        <img src="' . $piece['image'] . '" alt="' . $piece['project_name'] . ' Screen Shot" />
-                                    </a>
-                                </div>
-                                <div class="project-description">
-                                    <h3>' . $piece['project_name'] . '</h3>
-                                    <p>' . $piece['description'] . '</p>
-                                    <a href="' . $piece['link'] . '" target="_blank" class="button">Visit this Project</a>
-                                </div>
-                            </section>';
-                    }
-                ?>
-
-            </article>
-            <article class="contact-me" id="contact-me">
-                <h2>Contact Me</h2>
-                <ul id="form-messages"><?php echo $confirm_msg; ?></ul>
-                <form id="contact-form" action="php/contact.php" method="post">
-                    <fieldset>
-                        <legend>Your Personal Details</legend>
-                        <p class="form-row">
-                            <label for="first-name">First Name*</label>
-                            <input class="<?php if($first_name_error) { echo 'error'; } ?>" id="first-name" name="first-name" type="text" />
-                        </p>
-                        <p class="form-row">
-                            <label for="last-name">Last Name*</label>
-                            <input class="<?php if($last_name_error) { echo 'error'; } ?>" id="last-name" name="last-name" type="text" />
-                        </p>
-                        <p class="form-row">
-                            <label for="email">Email*</label>
-                            <input class="<?php if($email_error) { echo 'error'; } ?>" id="email" name="email" />
-                        </p>
-                        <p class="form-row">
-                            <label for="phone">Phone Number</label>
-                            <input id="phone" name="phone" type="tel" />
-                        </p>
-                        <p class="form-row">
-                            <label for="message">Your Message*</label>
-                            <textarea class="<?php if($message_error) { echo 'error'; } ?>" name="message" id="message" cols="30" rows="10"></textarea>
-                        </p>
-                        <p class="form-row">
-                            <input type="submit" value="Submit" />
-                            <input type="hidden" name="is-ajax" />
-                        </p>
-                    </fieldset>
-                </form>
-            </article>
+            <article class="about-me page-section">
+                <div class="page-section-inner">
+                    <h2>About Me</h2>
+                    <section>
+                        <div class="bio-img">
+                            <img src="img/headshot.jpg" alt="Portrait of Yours Truly" />
+                            <small>Portrait courtesy of <a href="http://navynhum.com" target="_blank">Navy Nhum Photography</a></small>
+                        </div>
+                        <div class="bio-text">
+                            <p>Hi! My name is Devon and I am a junior full-stack web developer. I love code, teaching people to code, and some other stuff too. But my biggest passion in life is learning. I like to learn new things every day and if I am not learning something new, I don't consider it a full day.</p>
+                            <p>Born in Beautiful Barrie, Ontario, I was raised in the U.S.A. I returned to Canada in 2000 after my first year of university, and have been here since. My journey has led me down many paths since then, but I eventually found my way to HTML and CSS, which inspired me to join the Interactive Web Design and Development program at Georgian College in Barrie. Since completing the IWDD course, I have had the good fortune to be able to work in the industry, learning WordPress and honing my development skills.</p>
+                            <p>Now I look forward to more opportunities to learn and grow as a web developer. While I have a great deal of love for the front-end, I particularly look forward to building on my back-end and programming skills.</p>
+                        </div>
+                    </section>
+                </div><!-- end .page-section-inner -->
+            </article><!-- end .about-me -->
+            <article class="my-work page-section">
+                <div class="page-section-inner">
+                    <h2>My Work</h2>
+                    <?php
+                        foreach ($pieces as $piece) {
+                            echo '<section class="project">
+                                    <div class="project-inner">
+                                        <div class="project-image">
+                                            <a href="' . $piece['link'] . '" target="_blank">
+                                                <img src="' . $piece['image'] . '" alt="' . $piece['project_name'] . ' Screen Shot" />
+                                            </a>
+                                        </div>
+                                        <div class="project-description">
+                                            <h3>' . $piece['project_name'] . '</h3>
+                                            <p>' . $piece['description'] . '</p>
+                                            <a href="' . $piece['link'] . '" target="_blank" class="button">Visit this Project</a>
+                                        </div>
+                                    </div><!-- end .project-inner -->
+                                </section><!-- end .project -->';
+                        }
+                    ?>
+                </div><!-- end .page-section-inner -->
+            </article><!-- end .my-work -->
+            <article class="contact-me page-section" id="contact-me">
+                <div class="page-section-inner">
+                    <h2>Contact Me</h2>
+                    <ul id="form-messages"><?php echo $confirm_msg; ?></ul>
+                    <form id="contact-form" action="php/contact.php" method="post">
+                        <fieldset>
+                            <legend>Your Personal Details</legend>
+                            <p class="form-row">
+                                <label for="first-name">First Name*</label>
+                                <input class="<?php if($first_name_error) { echo 'error'; } ?>" id="first-name" name="first-name" type="text" />
+                            </p>
+                            <p class="form-row">
+                                <label for="last-name">Last Name*</label>
+                                <input class="<?php if($last_name_error) { echo 'error'; } ?>" id="last-name" name="last-name" type="text" />
+                            </p>
+                            <p class="form-row">
+                                <label for="email">Email*</label>
+                                <input class="<?php if($email_error) { echo 'error'; } ?>" id="email" name="email" />
+                            </p>
+                            <p class="form-row">
+                                <label for="phone">Phone Number</label>
+                                <input id="phone" name="phone" type="tel" />
+                            </p>
+                            <p class="form-row">
+                                <label for="message">Your Message*</label>
+                                <textarea class="<?php if($message_error) { echo 'error'; } ?>" name="message" id="message" cols="30" rows="10"></textarea>
+                            </p>
+                            <p class="form-row">
+                                <input type="submit" value="Submit" />
+                                <input type="hidden" name="is-ajax" />
+                            </p>
+                        </fieldset>
+                    </form>
+                </div><!-- end .page-section-inner -->
+            </article><!-- end .contact-me -->
         </main>
         <footer>
             <small>&copy; <?php echo date("Y") ?> Devon Daviau. All rights reserved.</small>

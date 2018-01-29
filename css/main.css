@@ -101,6 +101,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* GLOBAL **********************************/
+
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -110,14 +112,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-    width: 1100px;
-    max-width: 95%;
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
-article {
-    padding: 30px 0;
+.about-me,
+.contact-me{
+    padding: 30px 5%;
 }
+
+/********************************** end global */
+
+/* MAIN NAVIGATION ******************************/
 
 .main-nav li {
     font-family: "Lato", sans-serif;
@@ -135,14 +142,11 @@ header {
     background-size: cover;
 }
 
-.project {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
-}
+/******************************** end main navigation */
 
-.about-me > section {
+/* ABOUT ME **************************************/
+
+.about-me .page-section-inner > section {
     display: flex;
 }
 
@@ -152,6 +156,15 @@ header {
 
 .bio-img img {
     max-width: 300px;
+}
+
+/****************************** end about me */
+
+
+/* MY WORK ***********************************/
+
+.my-work h2 {
+    padding-left: 5%
 }
 
 .my-work .project:nth-child(odd) .project-image {
@@ -165,6 +178,44 @@ header {
 .my-work .project:nth-child(odd) .project-description {
     margin-right: 30px;
 }
+
+.project-inner {
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.project {
+    padding: 50px 0;
+}
+
+.project:nth-of-type(1) {
+    background: #058bc1;
+}
+
+.project:nth-of-type(3) {
+    background: #f45646;
+}
+
+/******************************* end my work */
+
+/* CONTACT ME ******************************/
+
+.contact-me label,
+.contact-me input {
+    display: block;
+}
+
+.contact-me input,
+.contact-me textarea {
+    border-radius: 3px;
+    border: 2px #c3c3c3 solid;
+    padding: 10px 1%
+}
+
+/***************************** end contact me */
 
 @media (max-width: 768px) {
     .bio-img {
