@@ -164,7 +164,7 @@ header {
 /* MY WORK ***********************************/
 
 .my-work h2 {
-    padding-left: 5%
+    padding-left: 5%;
 }
 
 .my-work .project:nth-child(odd) .project-image {
@@ -180,11 +180,10 @@ header {
 }
 
 .project-inner {
-    padding: 0 5%;
+    padding: 30px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
 }
 
 .project {
@@ -215,7 +214,25 @@ header {
     padding: 10px 1%
 }
 
+.error {
+    border-color: red;
+}
+
 /***************************** end contact me */
+
+/* FOOTER ************************************/
+
+footer {
+    padding: 20px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+
+/******************************** end footer */
+
+/* MEDIA QUERIES *************************/
 
 @media (max-width: 768px) {
     .bio-img {
@@ -269,25 +286,7 @@ header {
     }
 }
 
-.error {
-    border-color: red;
-}
-
-footer {
-    padding: 20px 0;
-    background: #000;
-    color: #fff;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-
+/****************************************** end media queries */
 
 /* ==========================================================================
    Helper classes
