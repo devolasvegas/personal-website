@@ -80,7 +80,7 @@ try {
                     <h2>My Work</h2>
                     <?php
                         foreach ($pieces as $piece) {
-                            echo '<section class="project">
+                            echo '<section class="project parallax">
                                     <div class="project-inner">
                                         <div class="project-image">
                                             <a href="' . $piece['link'] . '" target="_blank">

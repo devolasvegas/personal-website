@@ -190,12 +190,20 @@ header {
     padding: 50px 0;
 }
 
+.project:nth-child(even) {
+        color: #fff;
+}
+
 .project:nth-of-type(1) {
-    background: #058bc1;
+    background: #000 url("../img/antelope-canyon-bg-1.jpg") no-repeat fixed center;
+    background-size: cover;
+    opacity: 0.88;
 }
 
 .project:nth-of-type(3) {
-    background: #f45646;
+    background: #000 url("../img/antelope-canyon-bg-2.jpg") no-repeat fixed center;
+    background-size: cover;
+    opacity: 0.88;
 }
 
 /******************************* end my work */
