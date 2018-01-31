@@ -79,8 +79,9 @@ try {
                 <div class="page-section-inner">
                     <h2>My Work</h2>
                     <?php
+                        $i = 1;
                         foreach ($pieces as $piece) {
-                            echo '<section class="project parallax">
+                            echo '<section class="project' . ($i%2 != 0 ? " parallax" : "") . '">
                                     <div class="project-inner">
                                         <div class="project-image">
                                             <a href="' . $piece['link'] . '" target="_blank">
@@ -94,6 +95,8 @@ try {
                                         </div>
                                     </div><!-- end .project-inner -->
                                 </section><!-- end .project -->';
+
+                            $i++;
                         }
                     ?>
                 </div><!-- end .page-section-inner -->
