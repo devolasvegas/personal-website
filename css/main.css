@@ -191,7 +191,7 @@ header {
 }
 
 .project:nth-child(even) {
-        color: #fff;
+    color: #fff;
 }
 
 .project:nth-of-type(1) {
@@ -227,8 +227,19 @@ header {
     border-color: red;
 }
 
-#contact-form {
+
+.contact-container {
+    display: flex;
+}
+
+.contact-container > form,
+.contact-container > div {
     width: 50%;
+}
+
+.contact-me-bg {
+    background: red;
+    opacity: 0.5;
 }
 
 #contact-form input,

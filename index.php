@@ -105,35 +105,39 @@ try {
                 <div class="page-section-inner">
                     <h2>Contact Me</h2>
                     <ul id="form-messages"><?php echo $confirm_msg; ?></ul>
-                    <form id="contact-form" action="php/contact.php" method="post">
-                        <fieldset>
-                            <legend>Your Personal Details</legend>
-                            <p class="form-row">
-                                <label for="first-name">First Name*</label>
-                                <input class="<?php if($first_name_error) { echo 'error'; } ?>" id="first-name" name="first-name" type="text" />
-                            </p>
-                            <p class="form-row">
-                                <label for="last-name">Last Name*</label>
-                                <input class="<?php if($last_name_error) { echo 'error'; } ?>" id="last-name" name="last-name" type="text" />
-                            </p>
-                            <p class="form-row">
-                                <label for="email">Email*</label>
-                                <input class="<?php if($email_error) { echo 'error'; } ?>" id="email" name="email" />
-                            </p>
-                            <p class="form-row">
-                                <label for="phone">Phone Number</label>
-                                <input id="phone" name="phone" type="tel" />
-                            </p>
-                            <p class="form-row">
-                                <label for="message">Your Message*</label>
-                                <textarea class="<?php if($message_error) { echo 'error'; } ?>" name="message" id="message" cols="30" rows="10"></textarea>
-                            </p>
-                            <p class="form-row">
-                                <input type="submit" value="Submit" />
-                                <input type="hidden" name="is-ajax" />
-                            </p>
-                        </fieldset>
-                    </form>
+                    <div class="contact-container">
+                        <form id="contact-form" action="php/contact.php" method="post">
+                            <fieldset>
+                                <legend>Your Personal Details</legend>
+                                <p class="form-row">
+                                    <label for="first-name">First Name*</label>
+                                    <input class="<?php if($first_name_error) { echo 'error'; } ?>" id="first-name" name="first-name" type="text" />
+                                </p>
+                                <p class="form-row">
+                                    <label for="last-name">Last Name*</label>
+                                    <input class="<?php if($last_name_error) { echo 'error'; } ?>" id="last-name" name="last-name" type="text" />
+                                </p>
+                                <p class="form-row">
+                                    <label for="email">Email*</label>
+                                    <input class="<?php if($email_error) { echo 'error'; } ?>" id="email" name="email" />
+                                </p>
+                                <p class="form-row">
+                                    <label for="phone">Phone Number</label>
+                                    <input id="phone" name="phone" type="tel" />
+                                </p>
+                                <p class="form-row">
+                                    <label for="message">Your Message*</label>
+                                    <textarea class="<?php if($message_error) { echo 'error'; } ?>" name="message" id="message" cols="30" rows="10"></textarea>
+                                </p>
+                                <p class="form-row">
+                                    <input type="submit" value="Submit" />
+                                    <input type="hidden" name="is-ajax" />
+                                </p>
+                            </fieldset>
+                        </form>
+                        <div class="contact-me-bg"></div>
+                    </div>
+
                 </div><!-- end .page-section-inner -->
             </article><!-- end .contact-me -->
         </main>
