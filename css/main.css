@@ -187,7 +187,7 @@ header {
 }
 
 .project {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .project:nth-child(even) {
@@ -195,15 +195,16 @@ header {
 }
 
 .project:nth-of-type(1) {
-    background: #000 url("../img/antelope-canyon-bg-1.jpg") no-repeat fixed center;
+    background: #000 url("../img/antelope-canyon-bg-2.jpg") no-repeat fixed center;
     background-size: cover;
     opacity: 0.91;
 }
 
 .project:nth-of-type(3) {
-    background: #000 url("../img/antelope-canyon-bg-2.jpg") no-repeat fixed center;
+    background: #000 url("../img/antelope-canyon-bg-1.jpg") no-repeat fixed center;
     background-size: cover;
     opacity: 0.91;
+    background-position: -50%;
 }
 
 /******************************* end my work */
@@ -224,6 +225,19 @@ header {
 
 .error {
     border-color: red;
+}
+
+#contact-form {
+    width: 50%;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 95%;
+}
+
+#contact-form input[type="submit"] {
+    width: 250px;
 }
 
 /***************************** end contact me */

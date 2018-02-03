@@ -47,7 +47,7 @@ try {
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <header class="clearfix">
+        <header role="banner" class="clearfix">
             <nav role="navigation" class="main-nav">
                 <ul class="page-links">
                     <li><a href="#about-me" title="Link to my bio.">about me</a></li>
