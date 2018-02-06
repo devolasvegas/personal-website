@@ -77,7 +77,15 @@ try {
             </article><!-- end .about-me -->
             <article class="my-work page-section">
                 <div class="page-section-inner">
-                    <h2>My Work</h2>
+                    <section class="my-work-text">
+                        <h2>My Work</h2>
+                        <p>Below you will find a few examples of work that I have done since going through the IWDD program at Georgian. I have worked with HTML5 and CSS3, JavaScript, PHP, SQL, ASP.NET and C#, and the MEAN technology stack. A couple of these portfolio pieces were put together while at school, and all hand-coded by me. I am very comfortable with git and GitHub, and have utilized continuous deployment to the cloud using services like Heroku and Azure.</p>
+
+                        <p>I have also had the great fortune to work with a couple of stellar agencies and individuals since leaving school, and have completed many WordPress projects with them. If you wish, I can provide you with a more complete list of these projects.</p>
+
+                        <p>I continue to work with WordPress and learn more about this powerful web framework, as well as practicing my other skills. Most nights you will find me at my laptop studying WordPress, PHP, Node, or JavaScript and I have even recently begun dabbling with C.</p>
+                    </section>
+
                     <?php
                         $i = 1;
                         foreach ($pieces as $piece) {

@@ -4,3 +4,5 @@
 php/mailing-details.php
 php/db.php
 .idea
+.htpasswd
+portfolio-table.sql
